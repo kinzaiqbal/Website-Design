@@ -1,101 +1,88 @@
-import Image from "next/image";
+import React from 'react';
+import Navbar from './components/navbar';  
 
-export default function Home() {
+const Page = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex flex-col min-h-screen bg-gray-800">
+      {/* Navbar Section */}
+      <Navbar />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Main Content Section */}
+      <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-[1046px] h-[1028px] flex flex-col items-center gap-20 py-20">
+        {/* Main Container */}
+        <div className="w-[701px] h-[496px] flex flex-col items-center gap-20">
+          
+          {/* Header Tag */}
+          <h4 className="w-[77px] h-[24px] text-primary font-bold text-[16px] leading-[24px] tracking-[0.1px]">
+            Welcome
+          </h4>
+
+          {/* Headline */}
+          <h1 className="w-[542px] h-[160px] text-light-text font-bold text-[58px] leading-[80px] text-center tracking-[0.2px]">
+            Selling on the internet like a pro
+          </h1>
+
+          {/* Sub Headline */}
+          <h4 className="w-[536px] h-[60px] text-light-text font-normal text-[20px] leading-[30px] text-center tracking-[0.2px]">
+            We know how large objects will act, but things on a small scale just do not act the way
+          </h4>
+
+          {/* Call to Action Buttons */}
+          <div className="flex gap-2 w-[365px] h-[52px]">
+            {/* Primary Button */}
+            <button className="w-[193px] h-[52px] bg-primary text-light-text rounded-[5px] flex justify-center items-center py-4 px-10">
+              <span className="text-[14px] font-bold">Get Quote Now</span>
+            </button>
+
+            {/* Secondary Button */}
+            <button className="w-[162px] h-[52px] border-[1px] border-primary text-primary rounded-[5px] flex justify-center items-center py-4 px-10">
+              <span className="text-[14px] font-bold">Learn More</span>
+            </button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Feature Section */}
+        <div className="flex gap-8 w-[1046px] h-[292px] bg-gray-800">
+          
+          {/* Feature 1 */}
+          <div className="w-[328px] h-[292px] flex flex-col items-start p-[35px] gap-5 bg-white shadow-lg">
+            <div className="w-[70px] h-[76px] bg-accent-2 rounded-[10px] flex justify-center items-center">
+              {/* Icon for Feature 1 */}
+            </div>
+            <h3 className="text-[16px] font-bold text-[#252B42]">Feature Title 1</h3>
+            <div className="w-[50px] h-[2px] bg-danger"></div>
+            <p className="w-[222px] h-[60px] text-[14px] font-normal text-secondary-text leading-[20px]">
+              Description of feature 1 goes here.
+            </p>
+          </div>
+
+          {/* Feature 2 */}
+          <div className="w-[328px] h-[292px] flex flex-col items-start p-[35px] gap-5 bg-white shadow-lg">
+            <div className="w-[70px] h-[76px] bg-accent-1 rounded-[10px] flex justify-center items-center">
+              {/* Icon for Feature 2 */}
+            </div>
+            <h3 className="text-[16px] font-bold text-[#252B42]">2,769 online courses</h3>
+            <div className="w-[50px] h-[2px] bg-danger"></div>
+            <p className="w-[222px] h-[60px] text-[14px] font-normal text-secondary-text leading-[20px]">
+            The gradual accumulation of information about atomic and small-scale behaviour..
+            </p>
+          </div>
+
+          {/* Feature 3 */}
+          <div className="w-[328px] h-[292px] flex flex-col items-start p-[35px] gap-5 bg-primary shadow-lg">
+            <div className="w-[70px] h-[76px] bg-white rounded-[10px] flex justify-center items-center">
+              {/* Icon for Feature 3 */}
+            </div>
+            <h3 className="text-[16px] font-bold text-light-text">training Courses</h3>
+            <div className="w-[50px] h-[2px] bg-white"></div>
+            <p className="w-[222px] h-[60px] text-[14px] font-normal text-light-text leading-[20px]">
+              The gradual accumulation of information about atomic and small-scale behaviour..
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Page;
